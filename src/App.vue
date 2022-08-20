@@ -7,18 +7,18 @@ import HelloWorld from "./components/HelloWorld.vue";
 <template>
   <main>
     <section>
-      <p style="font-size: 1em; font-weight: bold">Ng Yu Yue</p>
+      <span class="name">NG YU YUE</span>
       <p>Hey there friend.</p>
       <p>
         I am currently a 2nd year computer science student studying in Fudan
         University located in Shanghai.
       </p>
       <p>
-        Feel free to contact me for freelance opportunities through
+        Feel free to contact me for freelance opportunities on
         <a class="email" href="mailto:hello@nyydev.me">hello@nyydev.me</a>
       </p>
       <ul class="socials">
-        <li>Find me on: </li>
+        <li>Find me on:</li>
         <li><a href="https://github.com/NYYCS">GitHub</a></li>
         <li><a href="https://linkedin.com/in/nyydev">LinkedIn</a></li>
       </ul>
@@ -27,6 +27,13 @@ import HelloWorld from "./components/HelloWorld.vue";
 </template>
 
 <style scoped>
+.name {
+  color: white;
+  font-size: 0.8em;
+  font-weight: 900;
+  letter-spacing: 0.3ch;
+}
+
 a {
   position: relative;
   display: inline-block;
@@ -59,5 +66,4 @@ a:hover {
   gap: 0.5em;
   margin-top: 2em;
 }
-
 </style>
