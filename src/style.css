@@ -16,19 +16,24 @@
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  color: white;
+  position: relative;
+  display: inline-block;
+  opacity: 0.5;
+  font-weight: initial;
+  transition: all ease-in-out 0.4s;
+  text-decoration: none;
 }
+
 a:hover {
-  color: #535bf2;
+  transform: scale(1.01);
+  opacity: 1;
 }
 
 body {
   margin: 0;
   display: flex;
   place-items: center;
-  background: radial-gradient(circle,rgba(38, 4, 92, 0.088) 0, black 100%);
   min-width: 320px;
   min-height: 100vh;
 }
@@ -55,15 +60,34 @@ footer {
   padding: 2rem;
 }
 
+.underline {
+  position: relative;
+}
+
+.underline::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  left: 0;
+  bottom: -2px;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
-  a:hover {
-    color: #747bff;
+  a {
+    color: #213547;
   }
   button {
     background-color: #f9f9f9;
+  }
+
+  .underline::after {
+    background-color: #213547;
   }
 }
